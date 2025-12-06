@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GiftMind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container" id="home">
+    <img src="icon.png" alt="GiftMind Logo" class="logo" />
+    <h1>GiftMind</h1>
+    <p class="slogan">Des idées brillantes, sans effort</p>
+    <button onclick="startApp()">Commencer</button>
+    <a href="#" onclick="goPremium()">Passer à Premium</a>
+  </div>
+
+  <div class="container hidden" id="preferences">
+    <h2>🎁 Générateur d’idées IA</h2>
+    <input type="text" id="age" placeholder="Âge du destinataire" />
+    <input type="text" id="relation" placeholder="Relation (ami, parent…)" />
+    <input type="text" id="budget" placeholder="Budget (€)" />
+    <input type="text" id="culture" placeholder="Culture ou pays" />
+    <button onclick="generateSuggestions()">Voir les idées</button>
+  </div>
+
+  <div class="container hidden" id="suggestions">
+    <h2>🎁 Idées de cadeaux</h2>
+    <ul id="giftList"></ul>
+    <button onclick="addToCalendar()">Ajouter au calendrier</button>
+  </div>
+
+  <div class="container hidden" id="calendar">
+    <h2>📅 Calendrier IA</h2>
+    <p>Le cadeau a été ajouté à votre calendrier intelligent.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
